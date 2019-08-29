@@ -22,7 +22,7 @@ keras
 All nltk corpuses are already downloaded and ready to use.
 
 
-This image will launch a jupyter notebook instance on `http://localhost:8888``. The password is `ironhack`.
+This image will launch a jupyter notebook instance on `http://localhost:8888`. The password is `ironhack`.
 
 
 ## How to use it
