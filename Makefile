@@ -1,4 +1,4 @@
-VERSION=0.0.1
+VERSION=latest
 
 docker-build:
 	docker build -t ironhack-data:${VERSION} .
