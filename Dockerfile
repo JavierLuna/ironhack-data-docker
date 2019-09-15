@@ -14,9 +14,10 @@ RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y build-essential cmake unzip pkg-config curl git libjpeg-dev libpng-dev libtiff-dev libatlas-base-dev gfortran clang
 
 
-# Install requirements 
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+# Install requirements
+RUN pip install pipenv
+COPY Pipfile* ./
+RUN python -m pipenv install --ignore-pipfile --system --deploy
 
 # Download all nltk corpus
 RUN python -m nltk.downloader all
