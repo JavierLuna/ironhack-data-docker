@@ -2,6 +2,9 @@ FROM python:3.7.4-slim-stretch
 
 WORKDIR /ironhack-data
 
+# Allow overcommit to avoid memory errors
+RUN echo 1 > /proc/sys/vm/overcommit_memory
+
 # This is so the jupyter kernel doesn't die on us
 ENV TINI_VERSION v0.6.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/bin/tini
